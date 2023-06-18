@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="homestyle.css">
+
+</head>
+
+<body class="bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <section class="section-header">
+                    <div class="container-fluid">
+                        <div class="row bg-dark">
+                            <div class="col-lg-2 col-xs-12">
+                                <img src="images/logo.png" class="img-fluid">
+                            </div>
+                            <div class="col-10">
+                                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#collapsibleNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="home.html">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#" data-toggle="modal"
+                                                    data-target="#myModal">Sign In</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#" data-toggle="modal"
+                                                    data-target="#yourModal">Sign
+                                                    Up</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle active" data-toggle="dropdown"
+                                                    href="">Categories</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="men.html">Men</a>
+                                                    <a class="dropdown-item" href="women.html">Women</a>
+                                                    <a class="dropdown-item" href="kids.html">Kids</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="cart.html">
+                                                    <svg class="pb-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                    </svg>
+                                                    Cart</a>
+                                            </li>
+                                        </ul>
+                                        <form class="navbar-form navbar-left" id="form">
+                                            <div class="input-group">
+                                                <input type="text" autocomplete="off" class="form-control"
+                                                    placeholder="Search" id="query" name="q">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default" type="submit"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-search"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <script>
+                                            const f = document.getElementById('form');
+                                            const q = document.getElementById('query');
+                                            const google = 'https://www.google.com/search?q=';
+
+                                            function submitted(event) {
+                                                event.preventDefault();
+                                                const url = google + q.value;
+                                                const win = window.open(url, '_blank');
+                                                win.focus();
+                                            }
+
+                                            f.addEventListener('submit', submitted);
+                                        </script>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-title text-light text-center">
+                    <div class="row active">
+                        <div class="col m-2">
+                            <h5>Kids wear & baby products</h5>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-women-dash text-light text-center mt-4">
+                    <div class="row">
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/nautinati-multi-coloured-printed-westernwear-girls-jumpsuit/p/5521758"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k1.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">Nautinati</li>
+                                    <li class="small">Multi Coloured Printed Westernwear Girls Jumpsuit
+                                    </li>
+                                    <li>₹ 630 <del>₹ 1,3999</del> <span class="text-success">55%</span></li>
+                                    <li class="small">3-4 Years, 4-5 Years, 5-6 Years, 6-7 Years</li>
+                                </ul>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/tiber-taber-boys-bundi-kurta-set-printed-floral-blue/p/5679032"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k2.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">TIBER TABER</li>
+                                <li class="small">Boys Bundi Kurta Printed Floral - Blue (Set of 3)
+                                </li>
+                                <li>₹ 2,596 <del>₹ 2,950</del> <span class="text-success">12%</span></li>
+                                <li class="small">6-12 Months, 1-2 Years, 2-3 Years, 3-4 Year</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/anthrilo-heart-dress-green/p/5444632"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k3.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">ANTHRILO</li>
+                                <li class="small">Heart Dress Green
+                                </li>
+                                <li>₹ 720 <del>₹ 899</del> <span class="text-success">20%</span></li>
+                                <li class="small">0-6 Months, 6-12 Months, 1-2 Years, 2-3 Years</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/lilpicks-floral-print-frilled-top-with-green-trouser-set/p/3708280"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k4.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">Lilpicks</li>
+                                    <li class="small">Floral Print Frilled Top With Green Trouser Set (Pack Of 2)
+                                    </li>
+                                    <li>₹ 1,320 <del>₹ 2,199</del> <span class="text-success">40%</span></li>
+                                    <li class="small">3-4 Years, 8-10 Years, 10-12 Years, 12-14 Years</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/cherry-crumble-by-nitt-hyman-green-checks-cotton-unrepented-top-bottom-set-of-2/p/6186064"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k5.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">CHERRY CRUMBLE BY NITT HYMAN</li>
+                                    <li class="small">Green Checks Cotton Unrepented Top & Bottom (Set of 2)
+                                    </li>
+                                    <li>₹ 1,960 <del>₹ 2,799</del> <span class="text-success">30%</span></li>
+                                    <li class="small">12-18 Months, 18-24 Months, 2-3 Years, 3-4 Years</li>
+                                </ul>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/tiber-taber-infant-white-angrakha-kurta-dhoti-set/p/5678990"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k6.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">TIBER TABER</li>
+                                <li class="small">Infant White Angrakha kurta dhoti (Set of 1)
+                                </li>
+                                <li>₹ 1,755<del>₹ 1,950</del> <span class="text-success">10%</span></li>
+                                <li class="small">0-3 Months, 3-6 Months, 6-12 Months, 1-2 Years</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/nautinati-girls-multi-color-dress/p/6887596"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k7.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">Nautinati</li>
+                                <li class="small">Girls Multi-Color Dress (Set of 2)
+                                </li>
+                                <li>₹ 750 <del>₹ 1,499</del> <span class="text-success">50%</span></li>
+                                <li class="small">6-12 Months, 12-18 Months, 18-24 Months, 2-3 Years</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/stylo-bug-girls-colorblock-collar-neck-a-line-casual-wear-dress-multicolor/p/9689839"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k8.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">Stylo Bug</li>
+                                    <li class="small">Girls Colorblock Collar Neck A Line Casual Wear Dress -Multicolor
+                                    </li>
+                                    <li>₹ 749 <del>₹ 1,498</del> <span class="text-success">50%</span></li>
+                                    <li class="small">4-5 Years, 6-7 Years, 7-8 Years, 9-10 Years, 13-14 Years</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/anthrilo-icecream-short-sleeves-dress-blue/p/5893632"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k9.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">ANTHRILO</li>
+                                    <li class="small">Ice cream Short Sleeves Dress Blue
+                                    </li>
+                                    <li>₹ 720 <del>₹ 899</del> <span class="text-success">20%</span></li>
+                                    <li class="small">6-12 Months, 1-2 Years, 2-3 Years</li>
+                                </ul>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/clt-s-cloud-printed-t-shirt-pyjamas-set-of-2/p/4196348"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k10.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">Clt.s</li>
+                                <li class="small">Cloud Printed T-shirt & Pyjamas (Set of 2)
+                                </li>
+                                <li>₹ 485 <del>₹ 599</del> <span class="text-success">10%</span></li>
+                                <li class="small">3-6 Months, 6-9 Months, 12-18 Months</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/stylo-bug-girls-colorblock-collar-neck-knee-length-a-line-party-wear-dress-multicolor/p/9689841"
+                             class="text-dark text-decoration-none">
+                            <img src="images/kids/k11.webp" class="img-fluid">
+                            <ul class="list-unstyled mt-2">
+                                <li class="h6">Stylo Bug</li>
+                                    <li class="small">Girls Colorblock Knee Length A-Line Party Wear Dress -Multicolor (Set of 2)
+                                    </li>
+                                    <li>₹ 849 <del>₹ 1,698</del> <span class="text-success">50%</span></li>
+                                    <li class="small">2-3 Years, 4-5 Years, 6-7 Years, 7-8 Years</li>
+                            </ul>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 card">
+                            <a href="https://www.nykaafashion.com/nautinati-multicolor-coloured-stripes-westernwear-girls-set-of-2/p/5521693"
+                                 class="text-dark text-decoration-none">
+                                <img src="images/kids/k12.webp" class="img-fluid">
+                                <ul class="list-unstyled mt-2">
+                                    <li class="h6">Nautinati</li>
+                                    <li class="small">Multicolor Coloured Stripes Westernwear Girls (Set of 2)
+                                    </li>
+                                    <li>₹ 658 <del>₹ 1,399</del> <span class="text-success">59%</span></li>
+                                    <li class="small">6-12 Months, 12-18 Months, 18-24 Months</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-footer text-center text-dark small">
+                    <div class="row text-left details p-2">
+                        <div class="col-lg-3 col-xs-12">
+                            <ul class="list-unstyled ml-lg-4">
+                                <li class="fw-bold">WHO ARE WE</li>
+                                <li>About Us</li>
+                                <li>Careers</li>
+                                <li>Press</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <ul class="list-unstyled ml-lg-4">
+                                <li>HELP</li>
+                                <li>Shipping & Return Policy</li>
+                                <li>Help Center</li>
+                                <li>Terms & Conditions</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <ul class="list-unstyled ml-lg-4">
+                                <li>QUICKLINKS</li>
+                                <li>Offers</li>
+                                <li>Sitemap</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <ul class="list-unstyled ml-lg-4">
+                                <li>FOLLOW US</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg></li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row copyright p-2">
+                        <div class="col">
+                            <span>© 2022 - 2023 Fashion Hub Pvt. Ltd. All Rights Reserved</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="session-modal">
+
+                    <!-- The Modal-->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Sign In</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body-->
+                                <div class="modal-body">
+                                    <form name="myForm" action="home.html"  method="post" autocomplete="off"
+                                        class="was-validated" onsubmit="return validateForm(this)">
+                                        <div class="form-group">
+                                            <label for="" class="text-dark">Email Address</label>
+                                            <input type="text" class="form-control" name="email" required>
+                                            <div class="invalid-feedback">Please fill out this field</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="text-dark">Password</label>
+                                            <input type="password" class="form-control" name="password" required>
+                                            <div class="invalid-feedback">Please fill out this field</div>
+                                            <input type="checkbox" name="checkbox">
+                                            <label for="">Remember me</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+
+                                                <button type="Submit" class="btn btn-danger">Sign In</button>
+                                                <br>
+                                                <label for="" class="text-center">Don't have an account? Sign Up</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <script>
+                                        function validateForm(form) {
+                                            let email = document.forms["myForm"]["email"].value;
+                                            let password = document.forms["myForm"]["password"].value;
+                                            if(!form.checkbox.checked){
+                                                alert("Please tick the Remember box.");
+                                                return false;
+                                            }
+                                            if(email == "abc@123.com" && password=="abc@123") {
+                                                alert("Login Successfully");
+                                                return true;
+                                            }
+                                            else{
+                                                alert("Please check your email or password.");
+                                                return false;
+                                            }
+                                        }
+                                    </script>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Modal-->
+                    <div class="modal" id="yourModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Sign Up</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body-->
+                                <div class="modal-body">
+                                    <form action="signin.html"  method="post" autocomplete="off"
+                                        class="star">
+                                        <label for="Fname">First Name:</label>
+                                        <input type="text" id="Fname" name="abc" placeholder="First name"
+                                            class="form-control">
+                                        <label for="Sname">Second Name:</label>
+                                        <input type="text" id="Sname" name="def" placeholder="Second Name"
+                                            class="form-control">
+                                        <label for="Year">Age:</label>
+                                        <input type="text" id="year" name="ghi" class="form-control">
+                                        <label for="">Gender:</label>
+                                        <input type="radio" id="j" name="g">
+                                        <label for="j">Male</label>
+                                        <input type="radio" id="k" name="g">
+                                        <label for="k">Female</label>
+                                        <input type="radio" id="l" name="g">
+                                        <label for="l">Others</label>
+                                        <label for="Address">Address:</label>
+                                        <textarea name="Address" id="Address" cols="30" rows="10"
+                                            class="form-control">Type your Address</textarea>
+                                        <label for="Mailid">Mail ID:</label>
+                                        <input type="text" id="Mailid" name="Gmail" class="form-control">
+                                        <label for="pswrd">Password:</label>
+                                        <input type="text" id="pswrd" name="code" class="form-control">
+                                        <label for="cword">Confirm Password:</label>
+                                        <input type="text" id="cword" name="code" class="form-control"><br>
+                                        <button class="btn bg-danger text-light">Sign Up</button><br>
+                                        <label for="Account">Already have an account? Signin</label><br>
+                                </div>
+                                </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

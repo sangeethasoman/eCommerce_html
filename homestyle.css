@@ -1,0 +1,25 @@
+.section-header{
+    background-color: #fffaf1;
+    text-decoration: none;
+    color:azure;
+}
+.section-header a{ 
+    color:black
+}
+.section-footer .row{
+    background-color: #f3f2f2;;
+}
+ .section-footer .copyright{
+    background-color:  #fd7685;
+    color: #f3f2f2;
+}
+.modal-footer,.modal-header,.active,.btn-default{
+    background-color:  #fd7685;
+    color: #f3f2f2;
+} 
+.navbar-form{
+    margin-left: 30%;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #fd7685;
+}
